@@ -2,8 +2,8 @@
 ## Roman <-> Integer Conversion Challenge for Amplio Jr. SWE
 
 Steps to run locally:
-Download as zip file
-cd into folder then
+Download as zip file, 
+cd into folder, then...
 ```bash
 npm install
 npm run dev
