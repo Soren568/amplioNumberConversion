@@ -1,34 +1,29 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
-## Getting Started
+## Roman <-> Integer Conversion Challenge for Amplio Jr. SWE
 
-First, run the development server:
-
+Steps to run locally:
+Download as zip file
+cd into folder then
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## Further questions on technical challenge
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+### Testing
+Roman Math:
+    Simply adding more form inputs would (a second value input and a dropdown for the operator selection), defaulting to addition with the second value at 0 would keep the default functionality the same. Then in the backend we could convert each sent value to integer, pass through a function (could use a factory design to implement) and return the result of the operation. Convert to roman numeral and return both values. e.g. doMath(value1: int, value2: int, operation: string) -> result: int
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+How could I implement testing?
+    Using the built in react-testing-library we could set up a test suite to manage the expected results from the conversion functions and the req/res cycle in general.
 
-## Learn More
+Validation:
+    I set up a rudimentary validation system by checking the input type correlates with the selection the user made that they want to convert to. It simply uses if/else checks and changes the UI of the input box with an error message directing the user to valid input.
 
-To learn more about Next.js, take a look at the following resources:
+Logging:
+    Console.logging the request bodies on the server side and the response body on the client side would help understand where the disconnect is in any flaws of communication between the two.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
