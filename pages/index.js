@@ -18,7 +18,7 @@ export default function Home() {
       return
     }
     // send information to backend for conversion
-    axios.post("http://localhost:3000/api/convert", { value, type })
+    axios.post("/api/convert", { value, type })
       .then(res => setResult(res.data.converted))
       .catch(err => setErrorMsg(err.response.data.errMsg))
   }
